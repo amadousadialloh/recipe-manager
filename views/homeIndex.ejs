@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Manager</title>
+    <link href="/css/styles.css" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #f4f7f6;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 900px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        border-radius: 8px 8px 0 0;
+      }
+
+      header nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      header nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      header nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      header nav ul li {
+        font-size: 20px;
+        margin-top: -5px;
+      }
+
+      h1 {
+        margin-top: 10px;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      main h2 {
+        font-size: 1.8rem;
+        color: #333;
+      }
+
+      main p {
+        font-size: 1.2rem;
+        color: #666;
+      }
+
+      li {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+      }
+
+      li a {
+        text-decoration: none;
+        color: #4caf50;
+      }
+
+      li a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul>
+            <li><a class="homeIndex-link" href="/">Home</a></li>
+          </ul>
+        </nav>
+        <h1>Welcome to Recipe Manager</h1>
+      </header>
+      <main>
+        <h2>Your go-to place for all recipes</h2>
+        <p>
+          Start managing your recipes, add new ones, or edit your existing
+          collection.
+        </p>
+        <ul>
+          <li><a href="/recipes/index">View Recipes</a></li>
+          <li><a href="/recipes/add">Add Recipe</a></li>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>

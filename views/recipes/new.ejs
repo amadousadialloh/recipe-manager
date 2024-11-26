@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Recipe</title>
+    <style>
+      body {
+        background-color: #f4f7f6;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 900px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        border-radius: 8px 8px 0 0;
+      }
+
+      header nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      header nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      header nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      h1 {
+        margin-top: 10px;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      form {
+        text-align: left;
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      button {
+        padding: 0.8rem 2rem;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/recipes/index">All Recipes</a></li>
+          </ul>
+        </nav>
+        <h1>Edit Recipe</h1>
+      </header>
+      <main>
+        <form action="/recipes/<%= newRecipe._id %>?_method=PUT" method="post">
+          <div class="form-group">
+            <label for="title">Recipe Title:</label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              value="<%= newRecipe.title %>"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="ingrediens">Ingredients:</label>
+            <textarea name="ingrediens" id="ingrediens" required>
+<%= newRecipe.ingrediens %></textarea
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="instructions">Instructions:</label>
+            <textarea name="instructions" id="instructions" required>
+<%= newRecipe.instructions %></textarea
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category:</label>
+            <input
+              type="text"
+              name="category"
+              id="category"
+              value="<%= newRecipe.category %>"
+            />
+          </div>
+
+          <button type="submit">Update</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
